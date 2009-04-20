@@ -10,6 +10,7 @@ println str1
 
 //Groovy Strings can be double quoted
 def str2 = "Hello World"
+println str2
 
 //Groovy Strings can also be triple quoted. These strings can contain single
 //and double quotes and can be multiline
