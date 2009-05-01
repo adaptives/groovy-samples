@@ -1,3 +1,8 @@
 This project contains sample code written in the Groovy programming langauge.
 
-The files are commented and each file is meant to explain one aspect of Groovy programming.
+It is organized in 3 directories:
+1. basic_examples - This directory contains basic Groovy examples that show how to use Strings, lists, maps, etc in Groovy
+
+2. idiomatic_groovy - This directory contains examples which show how to code the Groovy way. There will be examples which show how to iterate across lists, howto create and parse XML structures, etc.
+
+3. mini_projects - This directory contains mini_projects which are very small self contained projects that bring together the concepts explained in basic_examples and idiomatic_groovy.
