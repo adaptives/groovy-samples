@@ -66,7 +66,7 @@ println """${g1.toString()}G is of type """ + g1.getClass().getName()
 println 'Adding Integers results in a ' + (3+3).class.getName()
 def bigInt = Integer.MAX_VALUE + Integer.MAX_VALUE
 println """ ${Integer.MAX_VALUE.toString()} + ${Integer.MAX_VALUE.toString()} = """ + bigInt
-println 'Adding large integers reulsts in a ' + bigInt.getClass().getName() + " which goes against Groovy's notion of automatic sensible type conversion"
+println 'Adding large integers reulsts in a ' + bigInt.getClass().getName() + " which goes against Groovy's notion of automatic sensible type conversio which goes against Groovy's notion of automatic sensible type conversion"
 println 'Subtraction of Integers results in a ' + (5-8).class.getName()
 println 'Subtraction involving an Integer and a float results in a ' + (4.3-3).class.getName()
 println '4/3 = ' + (4/3)
