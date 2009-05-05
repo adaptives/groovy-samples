@@ -1,3 +1,5 @@
+import java.awt.Color
+
 /**
  * (BSD Style License)
  *
@@ -39,7 +41,58 @@
 //executed
 
 def i = 10
-//let's call a closure
-6.each {
-  println "I have access to i even though riht now I am being invoked from the each method in class Integer: " + i
+//let's use a closure to loop 6 times. The function defined in curly braces is
+//a closure and will be invoked by the each method in Integer. Even though this
+//function is invoked by the 'times' method, it still has access to it's lexical scope
+6.times {
+  println "I have access to i even though riht now I am being invoked from the times method in class Integer: " + i
 }
+
+//Let's see some more examples of closures. In the code below we will compare
+//using regular list iteration vs. using closures to find certain items in a 
+//list
+
+def toys = [new Toy("doll", Color.PINK), 
+            new Toy("car", Color.BLUE), 
+            new Toy("house", Color.WHITE), 
+            new Toy("ball", Color.GREEN), 
+            new Toy("bat", Color.BLUE), 
+            new Toy("hoop", Color.YELLOW), 
+            new Toy("plane", Color.WHITE)]
+
+//Now we will find all toys which are blue in color
+
+//Here's how we would do it with simple iteration without closures
+List toysIWant = new ArrayList()
+Iterator iter = toys.iterator();
+  while(iter.hasNext()) {
+    Toy toy = (Toy)iter.next();
+    if(toy.getColor().equals(Color.BLUE)) {
+      toysIWant.add(toy);
+  }
+}
+
+
+//Her's how we would do it with closures
+def toysMySisterWants = toys.grep() {
+  it.getColor() == Color.PINK
+}
+
+println "Toys I want: ${toysIWant}"
+println "Toys my sister wants: ${toysMySisterWants}"
+
+class Toy {
+  private Color color;
+  private String name;
+  Toy(String name, Color color) {
+    this.name = name;
+    this.color = color;
+  }
+  Color getColor() {
+    return this.color;
+  }
+  public String toString() {
+    return name;
+  }
+}
+
