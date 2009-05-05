@@ -48,10 +48,10 @@ def str3 = """This is a multiline Hello World and
 Namaste"""
 println str3
 
-//Groovy has special type of Strings called GStrings which are surrounded by 
-//triple quotes. These strings can contain ${replacement} where $replacement 
-//can be resolved to an expression. When the program is run all the replacement 
-//variables in the String will be replaced with their values
+//Groovy has special type of Strings called GStrings These strings can contain 
+//${replacement} where $replacement can be resolved to an expression. 
+//When the program is run all the replacement variables in the String will be 
+//replaced with their values
 def gstr1 = """ ${str2} is so outdated now"""
 println gstr1
 println """(2 + 2) = ${2+2}"""
